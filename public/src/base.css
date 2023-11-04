@@ -1,0 +1,13 @@
+:root {
+    font-size: 16px;
+    --app-spacing: 1rem;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* overscroll-behavior: none; */
+}
+
+body * {
+    box-sizing: border-box;
+}

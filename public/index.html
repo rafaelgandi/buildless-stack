@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" data-author="Rafael Gandionco">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/favicon.ico" />       
+    <title>Hello</title>
+    <link rel="stylesheet" href="/src/base.css" />
+    <!-- See: https://github.com/guybedford/es-module-shims -->
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.8.1/dist/es-module-shims.js"></script>
+    <script type="importmap">
+        {
+            "imports" : {
+                "preact-htm": "/src/lib/preact-htm.js",
+                "styled": "/src/lib/styled.js",
+                "helpers": "/src/lib/helpers.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <main></main>
+    <script type="module" src="/src/index.js"></script>
+</body>
+</html>
