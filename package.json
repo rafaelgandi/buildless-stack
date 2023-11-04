@@ -1,0 +1,6 @@
+{
+  "name": "buildless-stack",
+  "scripts": {
+    "dev": "bun ./server.js"
+  }
+}
