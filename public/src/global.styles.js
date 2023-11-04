@@ -11,3 +11,6 @@ body {
 
 
 `;
+
+
+document.querySelector('main').style.opacity = 1;

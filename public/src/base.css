@@ -11,3 +11,7 @@ body {
 body * {
     box-sizing: border-box;
 }
+
+main {
+    transition: opacity .3s linear;
+}
