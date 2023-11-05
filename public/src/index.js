@@ -1,5 +1,4 @@
 import './global.styles.js';
-// import { html, render } from './lib/preact-htm.js';
 import { html, render } from 'preact-htm';
 import Foobar from '@components/Foobar/Foobar.js';
 

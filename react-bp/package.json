@@ -1,0 +1,17 @@
+{
+    "name": "react-bp",
+    "version": "1.0.0",
+    "description": "Simple boilerplate generator for Ionic React components",
+    "main": "./lib/bp.js",
+    "bin": {
+        "react-bp": "./bin/index.js",
+        "rbp": "./bin/index.js",
+        "prbp": "./bin/index.js"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Rafael Gandionco",
+    "license": "ISC"
+}
