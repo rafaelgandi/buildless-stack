@@ -10,7 +10,7 @@ if (!componentName) {
     throw new Error('Please provide a name for the component.');
 }
 const passedPath = args?.[0];
-const srcDir = (!!passedPath) ? (passedPath + '/') : './';
+const srcDir = (!!passedPath && passedPath !== 'null') ? (passedPath + '/') : './';
 const componentDir = srcDir + componentName;
 console.log('🚧 Building...');
 if (!existsSync(componentDir)) {

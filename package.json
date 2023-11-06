@@ -8,7 +8,7 @@
     "dev:bun": "bun ./server.js",
     "dev:node": "node ./server.js",
     "build": "echo 'Nothing to build here.'",
-    "rbp:bun": "bun ./react-bp/bin/index.js $INIT_CW",
+    "rbp:bun": "bun /Users/rafaelgandi/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js null",
     "rbp:node": "node ./react-bp/bin/index.js $INIT_CW"
   },
   "devDependencies": {
