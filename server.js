@@ -1,7 +1,7 @@
 // Run this to develop locally. //
 
 
-if (!!Bun && Bun?.file) {
+if (typeof Bun !== 'undefined' && Bun?.file) {
     const BASE_PATH = "./public";
     const server = Bun.serve({
         port: 8000,

@@ -10,5 +10,8 @@
     "build": "echo 'Nothing to build here.'",
     "rbp:bun": "bun ~/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js",
     "rbp:node": "node ~/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js"
+  },
+  "devDependencies": {
+    "mime": "^3.0.0"
   }
 }
