@@ -2,14 +2,14 @@
   "name": "buildless-stack",
   "author": "Rafael Gandionco",
   "@comment-scripts": [
-    "Make sure to replace the absolute path of rbp script command"
+    "$INIT_CW -> See: https://stackoverflow.com/a/58544432"
   ],
   "scripts": {
     "dev:bun": "bun ./server.js",
     "dev:node": "node ./server.js",
     "build": "echo 'Nothing to build here.'",
-    "rbp:bun": "bun ~/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js",
-    "rbp:node": "node ~/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js"
+    "rbp:bun": "bun ./react-bp/bin/index.js $INIT_CW",
+    "rbp:node": "node ./react-bp/bin/index.js $INIT_CW"
   },
   "devDependencies": {
     "mime": "^3.0.0"

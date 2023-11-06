@@ -5,11 +5,12 @@
 const { writeFileSync, existsSync, mkdirSync } = require('fs');
 // See: https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
 const args = process.argv.slice(2);
-const componentName = args[0];
+const componentName = args[1];
 if (!componentName) {
     throw new Error('Please provide a name for the component.');
 }
-const srcDir = './';
+const passedPath = args?.[0];
+const srcDir = (!!passedPath) ? (passedPath + '/') : './';
 const componentDir = srcDir + componentName;
 console.log('🚧 Building...');
 if (!existsSync(componentDir)) {
