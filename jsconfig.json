@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "preact-htm": ["public/src/lib/preact-htm.js"],
+        "styled": ["public/src/lib/styled.js"],
+        "helpers": ["public/src/lib/helpers.js"],
+        "@components/*": ["public/src/components/*"],
+        "@hooks/": ["public/src/hooks/*"],
+        "@lib/": ["public/src/lib/*"]
+      }
+    },
+    "exclude": ["node_modules", "**/node_modules", "dist"]
+  }
+  
