@@ -8,7 +8,12 @@
         "@components/*": ["public/src/components/*"],
         "@hooks/": ["public/src/hooks/*"],
         "@lib/": ["public/src/lib/*"]
-      }
+      },
+      "checkJs": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true
     },
     "exclude": ["node_modules", "**/node_modules", "dist"]
   }
