@@ -1,4 +1,3 @@
-import { transform } from './nested-css-to-flat.js'; // See: https://github.com/MatthiasKainer/nested-css-to-flat
 
 const $head = document.querySelector('head');
 const $body = document.querySelector('body');
@@ -19,11 +18,18 @@ const isNestedCssSupported = (() => {
 })();
 
 
-export default function styled(strings, ...values) {
+export default async function styled(strings, ...values) {
     const css = strings.reduce((result, string, index) => {
         return result + string + (values[index] || '');
     }, '');
-    const cssStyles = (!isNestedCssSupported) ? transform(css) : css;
+    let cssStyles = css;
+    if (!isNestedCssSupported) {
+        // Use polyfill if css nesting is not supported.
+        // See: https://github.com/csstools/postcss-nesting
+        const postcss = await import('https://esm.sh/postcss@8.4.31');
+        const postcssNesting = await import('https://esm.sh/postcss-nesting@12.0.1');
+        cssStyles = await postcss.default([postcssNesting.default]).process(cssStyles /*, processOptions */);
+    } 
     const style = document.createElement('style');
     style.setAttribute('data-generated', 'true');
     style.textContent = cssStyles;
