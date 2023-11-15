@@ -7,7 +7,7 @@ I use [Preact](https://preactjs.com/) for declarative UI programming and [HTM](h
 
 
 # CSS Styling
-I use [nested-css-to-flat](https://github.com/MatthiasKainer/nested-css-to-flat) as a polyfill for native nested css if it is not supported by a browser. [styled.js](https://github.com/rafaelgandi/buildless-stack/blob/main/public/src/lib/styled.js) is the utility function I made to make this easier to use.
+I use [postcss-nesting](https://github.com/csstools/postcss-nesting) built with [esm.sh cdn](https://esm.sh/) as a polyfill for native nested css if it is not supported by a browser. [styled.js](https://github.com/rafaelgandi/buildless-stack/blob/main/public/src/lib/styled.js) is the utility function I made to make this easier to use.
 
 
 # Types
