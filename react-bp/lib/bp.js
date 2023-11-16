@@ -25,7 +25,7 @@ function generateRandomString(length) {
         const randomIndex = Math.floor(Math.random() * alphanumericChars.length);
         randomString += alphanumericChars[randomIndex];
     }
-    return randomString;
+    return '_' + randomString;
 }
 
 const cssClassNameStr = generateRandomString(8);
