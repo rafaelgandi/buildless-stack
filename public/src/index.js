@@ -5,7 +5,9 @@ import Foobar from '@components/Foobar/Foobar.js'
 
 function App() {
     return html`
-        <${Foobar} greet="🎉 Hello World!" />
+        <>
+            <${Foobar} greet="🎉 Hello World!" />
+        </>
     `;
 }
 

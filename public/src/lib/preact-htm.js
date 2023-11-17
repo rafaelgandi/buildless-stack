@@ -4,5 +4,16 @@ import htm from "./htm.js";
 
 export * from "./preact.js";
 export * from"./hooks.js";
-export const html = htm.bind(Preact.h);
+// export const html = htm.bind(Preact.h);
+
+export function html(strings, ...values) {
+    const updatedJsx = strings.map((string) => {
+        // Allow Fragment support. //
+        if (string.includes('<>') || string.includes('</>')) {
+            return string.replace('<>', '').replace('</>', '');
+        }
+        return string;
+    });
+    return htm.bind(Preact.h)(updatedJsx, ...values);
+}
 export default Preact;
