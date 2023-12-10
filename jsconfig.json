@@ -7,8 +7,10 @@
         "styled": ["public/src/lib/styled.js"],
         "helpers": ["public/src/lib/helpers.js"],
         "@components/*": ["public/src/components/*"],
-        "@hooks/": ["public/src/hooks/*"],
-        "@lib/*": ["public/src/lib/*"]
+        "@hooks/*": ["public/src/hooks/*"],
+        "@lib/*": ["public/src/lib/*"],
+        "@service/*": ["public/src/service/*"],
+        "@pages/*":["public/src/pages/*"]
       },
     //   "checkJs": true,
       "allowSyntheticDefaultImports": true,
