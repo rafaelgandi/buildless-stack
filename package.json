@@ -1,15 +1,22 @@
 {
-  "name": "buildless-stack",
-  "author": "Rafael Gandionco",
-  "@comment-scripts": [
-    "$INIT_CW -> See: https://stackoverflow.com/a/58544432"
-  ],
-  "scripts": {
-    "build": "echo 'Nothing to build here.'",
-    "rbp:bun": "bun /Users/rafaelgandi/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js null",
-    "rbp:node": "node ./react-bp/bin/index.js $INIT_CW"
-  },
-  "devDependencies": {
-    "mime": "^3.0.0"
+    "name": "buildless-stack",
+    "author": "Rafael Gandionco",
+    "@comment-scripts": [
+      "$INIT_CW -> See: https://stackoverflow.com/a/58544432"
+    ],
+    "scripts": {
+      "build": "echo 'Nothing to build here.'",
+      "rbp:bun": "bun /Users/rafaelgandi/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js null",
+      "rbp:node": "node ./react-bp/bin/index.js $INIT_CW"
+    },
+    "@comments-devDependencies": {
+      "mime": "Is the only required package for development. Its used for the server.js to work.",
+      "eslint and its plugins": "Are nice to haves but are not really required for the stack to work."
+    },
+    "devDependencies": {
+      "eslint": "^8.56.0",
+      "eslint-plugin-react": "^7.33.2",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "mime": "^3.0.0"
+    }
   }
-}
