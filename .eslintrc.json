@@ -6,7 +6,9 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:react-hooks/recommended"
+        "plugin:react-hooks/recommended",
+        // See: https://github.com/developit/htm/issues/183#issuecomment-714642931
+        "plugin:lit/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": 12,
@@ -22,6 +24,9 @@
     "rules": {
         //add customize rules here as per your project's needs
         "semi": "warn",
-        "no-unused-vars": "warn"
+        "no-unused-vars": "warn",
+        // See: https://github.com/developit/htm/issues/183#issuecomment-714642931
+        "lit/binding-positions": "off",
+        "lit/no-invalid-html": "off"
     }
 }

@@ -11,10 +11,12 @@
     },
     "@comments-devDependencies": {
       "mime": "Is the only required package for development. Its used for the server.js to work.",
-      "eslint and its plugins": "Are nice to haves but are not really required for the stack to work."
+      "eslint and its plugins": "Are nice to haves but are not really required for the stack to work.",
+      "eslint-plugin-lit": "Added eslint lit plugin for a little jsx linting. See: https://github.com/developit/htm/issues/183#issuecomment-714642931"
     },
     "devDependencies": {
       "eslint": "^8.56.0",
+      "eslint-plugin-lit": "^1.10.1",
       "eslint-plugin-react": "^7.33.2",
       "eslint-plugin-react-hooks": "^4.6.0",
       "mime": "^3.0.0"
