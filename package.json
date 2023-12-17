@@ -5,6 +5,7 @@
       "$INIT_CW -> See: https://stackoverflow.com/a/58544432"
     ],
     "scripts": {
+      "dev": "bun ./server.js || node ./server.js",
       "build": "echo 'Nothing to build here.'",
       "rbp:bun": "bun /Users/rafaelgandi/Documents/Raffy/Projects/buildless-stack/react-bp/bin/index.js null",
       "rbp:node": "node ./react-bp/bin/index.js $INIT_CW"
