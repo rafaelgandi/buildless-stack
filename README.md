@@ -20,19 +20,24 @@ I use import map to alias some library script that I use. So I don't have to con
 
 # Finding packages
 Since I don't use a bundler in this stack I need a way to consume npm packages in the browser directly. The service that I found useful for this is [jsdelivr.com](https://www.jsdelivr.com/). I just search for the npm package name in the service and it will generate a cdn link I can use to reference directly or save it as a local file. Make sure to choose the ESM version.
-You can also use [this tool](https://esm.sh/) in generating es modules for the browser.
+You can also use [this tool](https://esm.sh/)(esm.sh) in generating es modules for the browser.
 
 # VSCode Extensions
 Make sure to install the official [lit-html extension](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) and the [styled-component extension](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components) for proper syntax highlighting.
+
+# Installing Dev Dependencies
+This stack has a few dev dependencies for developer convenience like js linting but is not really necessary.
+```javascript
+// 🥟 For bun environment
+bun install
+```
+
 
 # Running a Local Dev Server
 I use Bun as a package manager but any package manager is fine.
 ```javascript
 // 🥟 For bun environment
-bun server.js 
-
-// For node environment
-node server.js
+bun dev
 ```
 
 # Additional Resources
@@ -44,3 +49,4 @@ node server.js
 - https://unsuckjs.com/
 - https://tone-row.com/blog/typescript-in-javascript-with-comments
 - https://stackoverflow.com/questions/68675994/what-is-jsconfig-json  (vscode helper file “jsconfig.json”)
+- https://mtsknn.fi/blog/jsx-vs-htm-hyperscript-tagged-markup/
