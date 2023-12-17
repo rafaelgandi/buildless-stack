@@ -1,6 +1,7 @@
-# 🌅 Buildless Stack
+# Buildless Stack
 A tiny buildless stack for my frontend development.
 
+<img src="https://lh3.googleusercontent.com/pw/ABLVV87U2nYPRXWvg5iDx2B1-U_rdiqAwEzOGAnQiNd19haAi7ppdJ4XiU1r71S8O4d9IYUPn0LI170ld_13u4JHaqW3Tj4RRTea04aEy2eISy8iDWVa6zccEs8cr9jNjQFWBFldAtRji_9vVYH71fVJLEgoag=w507-h507-s-no-gm?authuser=0" />
 
 # UI Library
 I use [Preact](https://preactjs.com/) for declarative UI programming and [HTM](https://github.com/developit/htm) as a buildless alternative to JSX. The combined standalone version used in this stack can be found [here.](https://preactjs.com/guide/v10/getting-started/#no-build-tools-route)
