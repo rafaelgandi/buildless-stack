@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-require('../lib/bp');
+import '../lib/bp.js';
 

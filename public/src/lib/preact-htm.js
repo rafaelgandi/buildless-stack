@@ -15,7 +15,9 @@ export function html(strings, ...values) {
         return string;
     });
     // LM: 2023-12-17 10:37:25 [Add a way to check for component tags without ${}]
-    const compTagTestRegExp = /<[A-Z].+>/g;
+    // <Component /> -> error
+    // <${Component}> -> good
+    const compTagTestRegExp = /<[A-Z].+>/g; 
     const updatedJsxStr = updatedJsx.toString();
     if (compTagTestRegExp.test(updatedJsxStr)) {
         updatedJsxStr.replace(compTagTestRegExp, function BuildlessCheckComponentTag(match) {
@@ -24,4 +26,7 @@ export function html(strings, ...values) {
     }
     return htm.bind(Preact.h)(updatedJsx, ...values);
 }
+// LM: 2023-12-19 10:28:34 [Add indicator that we are using my buildless stack]
+document.documentElement.setAttribute('data-buildless-stack', 'true');
+
 export default Preact;

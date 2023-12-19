@@ -1,6 +1,7 @@
 {
     "name": "react-bp",
     "version": "1.0.0",
+    "type": "module",
     "description": "Simple boilerplate generator for Ionic React components",
     "main": "./lib/bp.js",
     "bin": {

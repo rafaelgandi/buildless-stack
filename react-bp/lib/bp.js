@@ -2,10 +2,16 @@
     Used to generate component boilerplates for SolidJS components
     www.rafaelgandi.com
 */
-const { writeFileSync, existsSync, mkdirSync } = require('fs');
+import { writeFileSync, existsSync, mkdirSync } from 'fs';
+import process from 'process';
 // See: https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/
 const args = process.argv.slice(2);
 const componentName = args[1];
+
+// eslint-disable-next-line
+console.log(process.cwd());
+// console.log(args);
+
 if (!componentName) {
     throw new Error('Please provide a name for the component.');
 }
@@ -52,9 +58,17 @@ export default styled\`
 \`;
 `;
 
+const componentTypesTemplate = `
+export type ${componentName}Props = {
+    children: any;
+};
+`;
+
 writeFileSync(`${componentDir}/${componentName}.js`, componentCodeTemplate);
 writeFileSync(`${componentDir}/${componentName}.styles.js`, componentStylesTemplate);
+writeFileSync(`${componentDir}/${componentName}.d.ts`, componentTypesTemplate);
 
 console.log(`|-- ${componentDir}/${componentName}.js`);
 console.log(`|-- ${componentDir}/${componentName}.styles.js`);
+console.log(`|-- ${componentDir}/${componentName}.d.ts`);
 console.log(`Component boilerplate created! 🤖✨`);
