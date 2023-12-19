@@ -45,7 +45,14 @@ I use Bun as a package manager but any package manager is fine.
 ```javascript
 // 🥟 For bun environment
 bun dev
+
+// For node with Yarn
+yarn dev
+
+// For node with NPM
+npm run dev
 ```
+Or you can just install [🍯 Simple Web Server](https://simplewebserver.org/) macos app for a standalone web server app.
 
 # Additional Resources
 - https://hackernoon.com/front-end-development-without-node_modules-using-skypack-and-snowpack-s03n33mk
@@ -57,3 +64,5 @@ bun dev
 - https://tone-row.com/blog/typescript-in-javascript-with-comments
 - https://stackoverflow.com/questions/68675994/what-is-jsconfig-json  (vscode helper file “jsconfig.json”)
 - https://mtsknn.fi/blog/jsx-vs-htm-hyperscript-tagged-markup/
+- https://simplewebserver.org/
+- https://gomakethings.com/articles/
