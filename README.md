@@ -6,7 +6,7 @@ A tiny buildless stack for my frontend development.
 # Getting Started
 Run the following command to get a boilerplate copy.
 ``` shell
-git clone https://github.com/rafaelgandi/buildless-stack.git && cd buildless-stack && rm -rf .git
+git clone https://github.com/rafaelgandi/buildless-stack.git buildless-$(date +"%Y%m%d") && cd buildless-$(date +"%Y%m%d") && rm -rf .git
 ```
 
 # UI Library
