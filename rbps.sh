@@ -1,28 +1,32 @@
 #!/bin/bash
 
 
-
-# NOT FINISHED YET.. still trying to find a way to run it on any directory
-
-
-# 1. BEFORE USING THIS SCRIPT MAKE SURE TO GIVE IT AN EXECUTABLE PERMISSION
+# Generate react or preact component boilerplate files.
+#
+#######################################################################################
+#
+# 1.) Before running this script make sure it has executable permission by running:
 # chmod +x ./rbp.sh  
 #
-# 2. Move this file to /usr/local/bin to be able to call it from any directory/
+# 2.) Add an alias to yout .zshrc file. Open ~/.zshrc and add the code below:
+# alias rbps="/The/path/to/your/rbps.sh"
 #
-
+# 3.) Refresh your terminal source by running:
+# source ~/.zshrc
+#
+#######################################################################################
 
 # Check if filename argument is provided
 if [ -z "$1" ]; then
-  echo "Please provide a filename as an argument."
+  echo "Please provide a component name as an argument."
   exit 1
 fi
 
-currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 # Get the filename from the argument
 componentName="$1"
-js_file="${currentDir}/${componentName}/${componentName}.js"
-style_file="${currentDir}/${componentName}/${componentName}.styles.js"
+js_file="${PWD}/${componentName}/${componentName}.js"
+style_file="${PWD}/${componentName}/${componentName}.styles.js"
+type_file="${PWD}/${componentName}/${componentName}.d.ts"
 
 echo "$js_file";
 
@@ -43,8 +47,13 @@ cssClassNameStr=$(generate_string)
 
 
 
-# Create the directory if it doesn't exist
+
+
+# Create the component directory if it doesn't exist
 mkdir -p "$(dirname "$js_file")"
+
+
+
 
 
 
@@ -53,13 +62,16 @@ cat << EOF > "$js_file"
 import { html } from 'preact-htm';
 import './$componentName.styles.js';
 
-/* * @param {import("../../types.d.ts").${componentName}Props} props */
+/** @param {import("./${componentName}.d.ts").${componentName}Props} props */
 export default function $componentName(props) {
     return html\`
         <div class="$cssClassNameStr"></div>
     \`;
 }
 EOF
+
+
+
 
 
 # Create the styles js file
@@ -72,6 +84,20 @@ export default styled\`
 \`;
 EOF
 
+
+
+
+# Create the type file for the component
+cat << EOF > "$type_file"
+export type ${componentName}Props = {
+    children: any;
+};
+EOF
+
+
+
+# Echo out the results
 echo "|-- $js_file"
 echo "|-- $style_file"
+echo "|-- $type_file"
 echo "Component boilerplate created! 🤖✨"

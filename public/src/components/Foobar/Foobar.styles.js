@@ -1,12 +1,12 @@
 import styled from 'styled';
-
 export default styled`
-
-.foobar {
-    text-align: center;
-    font-size: 3rem;
-    margin-top: calc(var(--app-spacing) * 5);
-}
-
-
+    ._26c1c2a7 {
+        text-align: center;
+        font-weight: 500;
+        & sub {
+            font-size: .8rem;
+            color: #ccc;
+            display: block;
+        }
+    }
 `;

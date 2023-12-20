@@ -1,16 +1,12 @@
-
 import { html } from 'preact-htm';
 import './Foobar.styles.js';
 
-
-/** @param {import("/public/types.d.ts").FoobarProps} props */
+/** @param {import("./Foobar.d.ts").FoobarProps} props */
 export default function Foobar(props) {
     return html`
-        <div class="foobar">${props.greet}</div>
+        <h1 class="_26c1c2a7">
+            ${props.greet}
+            <sub>buildless-stack at your service</sub>
+        </h1>
     `;
 }
-
-
-
-
-/* * @param {import("../../types.d.ts").FoobarProps} props */
