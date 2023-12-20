@@ -27,7 +27,7 @@ I use import map to alias some library script that I use. So I don't have to con
 
 # Finding packages
 Since I don't use a bundler in this stack I need a way to consume npm packages in the browser directly. The service that I found useful for this is [jsdelivr.com](https://www.jsdelivr.com/). I just search for the npm package name in the service and it will generate a cdn link I can use to reference directly or save it as a local file. Make sure to choose the ESM version.
-You can also use [this tool](https://esm.sh/)(esm.sh) in generating es modules for the browser.
+You can also use [this tool](https://esm.sh/)(esm.sh) in generating es modules for the browser. It's also good to check if a package has dependecies by using [this tool](https://bundlephobia.com/)(Bundle Phobia).
 
 # VSCode Extensions
 Make sure to install the official [lit-html extension](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html) and the [styled-component extension](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components) for proper syntax highlighting.
