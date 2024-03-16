@@ -3,7 +3,7 @@
       "baseUrl": ".",
       "paths": {
         "preact-htm": ["public/src/lib/preact-htm.js"],
-        "preact-router": ["public/src/lib/preact-router.js"],
+        "preact-router": ["public/src/lib/preact-router.4.1.2.js"],
         "styled": ["public/src/lib/styled.js"],
         "helpers": ["public/src/lib/helpers.js"],
         "@components/*": ["public/src/components/*"],
