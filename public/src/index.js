@@ -1,7 +1,7 @@
 // @ts-check
 import './global.styles.js';
 import { html, render } from 'preact-htm';
-import Foobar from '@components/Foobar/Foobar.js'
+import Foobar from '@components/Foobar/Foobar.js';
 
 function App() {
     return html`
