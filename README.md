@@ -12,6 +12,9 @@ git clone https://github.com/rafaelgandi/buildless-stack.git buildless-$(date +"
 # UI Library
 I use [Preact](https://preactjs.com/) for declarative UI programming and [HTM](https://github.com/developit/htm) as a buildless alternative to JSX. The combined standalone version used in this stack can be found [here.](https://preactjs.com/guide/v10/getting-started/#no-build-tools-route)
 
+# UI Component Library
+I use [Shoelace](https://shoelace.style/) for UI components. I use the shoelace.js script directly in the browser. Current version used is 2.15.1.
+
 
 # CSS Styling
 I use [postcss-nesting](https://github.com/csstools/postcss-nesting) built with [esm.sh cdn](https://esm.sh/) as a polyfill for native nested css if it is not supported by a browser. [styled.js](https://github.com/rafaelgandi/buildless-stack/blob/main/public/src/lib/styled.js) is the utility function I made to make this easier to use.
