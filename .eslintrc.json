@@ -7,7 +7,6 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        // See: https://github.com/developit/htm/issues/183#issuecomment-714642931
         "plugin:lit/recommended"
     ],
     "parserOptions": {
@@ -22,10 +21,27 @@
         "react-hooks"
     ],
     "rules": {
-        //add customize rules here as per your project's needs
-        "semi": "warn",
+        "strict":             [ "error", "safe" ],
+        "no-debugger":        "error",    
+        "keyword-spacing":    "error",
+        "no-var": "warn",
+        "no-undef":           "warn",
+        "no-undefined":       "warn",
+        "comma-dangle":       [ "error", "never" ],
+        "semi":               [ "error", "always" ],        
+        "guard-for-in":       "off",
+        "no-with":            "error",
+        "valid-typeof":       "error",
+        "no-continue":        "off",
+        "no-extra-semi":      "warn",
+        "no-unreachable":     "warn",
+        "no-extra-boolean-cast": "off",
+        "eqeqeq": "error",
+        "camelcase": "warn",
         "no-unused-vars": "warn",
-        // See: https://github.com/developit/htm/issues/183#issuecomment-714642931
+        "react/display-name": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": ["warn", {"skipUndeclared": true}],
         "lit/binding-positions": "off",
         "lit/no-invalid-html": "off"
     }
