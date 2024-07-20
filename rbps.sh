@@ -61,11 +61,11 @@ cat << EOF > "$js_file"
 import { html } from 'preact-htm';
 import './$componentName.styles.js';
 
-/* ts */`
+/* ts */\`
 type ${componentName}Props = {
     children: any;  
 };
-`;
+\`;
 export default function $componentName(props) {
     return html\`
         <div class="$cssClassNameStr"></div>
