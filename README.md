@@ -23,6 +23,11 @@ I use [postcss-nesting](https://github.com/csstools/postcss-nesting) built with 
 # Types
 Since I can't directly annotate my code with Typescript types. I just make a single file(```types.d.ts```) where I place all my Typescript type declarations and reference them using [JSDoc's import syntax](https://stackoverflow.com/questions/49836644/how-to-import-a-typedef-from-one-file-to-another-in-jsdoc-using-node-js). This way I somewhat get type autocomplete suggestions in VSCode.
 
+But... lets face it, the jsdoc syntax for typing is not very intuitive. So I came up with a way to annotate types to my preact components. I just add a js template literal to the top of my component function where I place the typescript type declarations. I use [Matt Bierner's Comment tagged templates](https://marketplace.visualstudio.com/items?itemName=bierner.comment-tagged-templates) vscode extension to get the typescript syntax highlighting in VSCode. It does not really do any type checking but I usually use it to be just a reference anyway.
+
+<img src="https://lh3.googleusercontent.com/pw/AP1GczPk7q3T4qg2qGr9OFeavWwlpN-eF1t216T6d27y_Fh5P6YbFynHRGvvQKsJYLUKOKfKeVLkoswaAmL6hRUJiyrk2JfEOlV6yBwS6uogBZFTfLWPS0H1LehfGOJMc8J8R-G7SXGTxmiBk5BDgKN-Un2_dg=w798-h388-s-no-gm?authuser=0" />
+
+
 
 # Import Maps
 I use import map to alias some library script that I use. So I don't have to constantly type out their paths. For browsers that don't yet support import maps I use this [shim.](https://github.com/guybedford/es-module-shims#import-maps)

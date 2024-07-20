@@ -26,7 +26,6 @@ fi
 componentName="$1"
 js_file="${PWD}/${componentName}/${componentName}.js"
 style_file="${PWD}/${componentName}/${componentName}.styles.js"
-type_file="${PWD}/${componentName}/${componentName}.d.ts"
 
 echo "$js_file";
 
@@ -62,7 +61,11 @@ cat << EOF > "$js_file"
 import { html } from 'preact-htm';
 import './$componentName.styles.js';
 
-/** @param {import("./${componentName}.d.ts").${componentName}Props} props */
+/* ts */`
+type ${componentName}Props = {
+    children: any;  
+};
+`;
 export default function $componentName(props) {
     return html\`
         <div class="$cssClassNameStr"></div>
@@ -87,17 +90,7 @@ EOF
 
 
 
-# Create the type file for the component
-cat << EOF > "$type_file"
-export type ${componentName}Props = {
-    children: any;
-};
-EOF
-
-
-
 # Echo out the results
 echo "|-- $js_file"
 echo "|-- $style_file"
-echo "|-- $type_file"
 echo "Component boilerplate created! 🤖✨"
