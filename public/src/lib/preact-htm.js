@@ -1,8 +1,8 @@
 /* esm.sh - esbuild bundle(preact-router@4.1.2) es2022 production */
-import * as Preact from "./preact.10.19.6.js";
+import * as Preact from "./preact-master.js";
 import htm from "./htm.3.1.1.js";
 
-export * from "./preact.10.19.6.js";
+export * from "./preact-master.js";
 export * from "./preact-hooks.10.19.6.js";
 // export const html = htm.bind(Preact.h);
 
